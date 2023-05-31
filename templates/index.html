@@ -3,14 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>My first website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">    </head>
     <body>
         <h1>Hello world!</h1>
         <h2>Oto moja pierwsza strona internetowa.</h2>
         <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Einstein_tongue.jpg" alt="Einstein">
-        <h3>O mnie</h3>
-        <p><b>Imię:</b> Zuzanna</p>
-        <p><strong>Nazwisko:</strong> Komendecka</p>
+        <div id="content">{% block content %}{% endblock %}</div>
     </body>
 </html>
